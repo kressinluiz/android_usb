@@ -24,3 +24,9 @@ Usage:
   3) Find the **UsbEndpoint** of that **UsbInterface** to communicate on.
   4) Open a **UsbDeviceConnection** to communicate with the **UsbDevice**.
 
+## Android Manifest Requirements
+- Include <uses-feature> element that declares the application uses the ANDROID.HARDWARE.USB.HOST feature
+- Minimum SDK 12
+- To notify the application of an attached USB Device, specify an <intent-filter> and <meta-data> element pair for the android.hardware.usb.action.USB_DEVICE_ATTACHED intent in the main activity.
+* <meta-data> element points to an external XML resource file that declares identifying information about the device that you want to detect.  
+
